@@ -1,8 +1,3 @@
-const variable1 = "Oleksandrrrr";
+const user = process.argv[2];
 
-
-if (variable1 != "Oleksandr") {
-    console.log('No Oleksandr here!');
-} else {
-    console.log('Oleksandr is here');
-}
+console.log(`Received event name: ${user}`);
