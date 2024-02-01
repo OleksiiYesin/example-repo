@@ -1,7 +1,7 @@
 name: My workflow
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -16,5 +16,3 @@ jobs:
     - name: Print Message
       run: echo "Hello, Oleksandr"
 
-    - name: Run JavaScript
-      run: node hello.js ${{ github.actor }}
