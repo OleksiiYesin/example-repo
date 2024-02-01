@@ -16,13 +16,10 @@ jobs:
     - name: Print Message
       run: echo "Hello, test tags"
 
-    - name: Tagging
+    - name: Run Hello World Script
       run: |
-        echo "v2.0.8-SHA-draft" > manifest.json
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
-        git add .
-        git commit -m "updated manifest.json"
-        git tag v2.0.8-SHA-draft
-        git push origin v2.0.8-SHA-draft
+        for ((i = 0; i < 60; i++)); do
+          echo "Hello, World!"
+          sleep 1
+        done
 
