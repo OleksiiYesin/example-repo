@@ -16,3 +16,10 @@ jobs:
     - name: Print Message
       run: echo "Hello, test tags"
 
+    - name: Tagging
+      run: |
+        touch file.txt
+        git add .
+        git commit -m "added new file"
+        git push
+
