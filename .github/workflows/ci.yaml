@@ -1,7 +1,7 @@
 name: My workflow
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -18,10 +18,11 @@ jobs:
 
     - name: Tagging
       run: |
-        touch file.txt
+        echo "v2.0.8-SHA-draft" > manifest.json
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
         git add .
-        git commit -m "added new file"
-        git push HEAD:${{ github.head_ref }}
+        git commit -m "updated manifest.json"
+        git tag v2.0.8-SHA-draft
+        git push origin v2.0.8-SHA-draft
 
