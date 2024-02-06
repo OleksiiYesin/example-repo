@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-    - name: Run Hello World Script
-      run: |
-        for ((i = 0; i < 60; i++)); do
-          echo "Hello, World!"
-          sleep 1
-        done
+      - name: Run Hello World Script
+        run: |
+          for ((i = 0; i < 60; i++)); do
+            echo "Hello, World!"
+            sleep 1
+          done
 
